@@ -1,139 +1,135 @@
-<html><head>
-    <style>
-      *{
-        margin: 0;
-        padding: 0;
-      }
-      body
-      {
-        background-color: rgb(58, 117, 87);
-        background-size: cover;
-        
-      }
-      header
-      {
-  
-        color: rgb(252, 252, 232);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 20vh;
-        font-size: 80px;
-        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-      }
-      
-      h1{
-        font-size: 40px;
-        font-family: Arial, Helvetica, sans-serif;
-        text-align: center;
-        margin: 3%;
-        color: rgb(225, 252, 232);
-        justify-content: center;
-      }
-  
-      h2{
-        font-size: 40px;
-        font-family: Arial, Helvetica, sans-serif;
-        text-align: center;
-        color: rgb(225, 252, 232);
-      }
-  
-      button{
-        background-color: rgb(225, 252, 232);
-        color: rgb(58, 117, 87);
-        text-align: center;
-        width: 140px;
-        height: 80px;
-        font-size:20px;
-        cursor: pointer;
-        font-family:Arial, Helvetica, sans-serif;
-        border-radius: 5px;
-        border-color: rgb(58, 117, 87);
-      }
-      a{
-        color: rgb(58, 117, 87);
-      }
-  
-      h3{
-        color: rgb(225, 252, 232);
-        font-size: 40px;
-        font-family: Arial, Helvetica, sans-serif;
-        text-align: center;
-        margin: 3%;
-        
-      }
-
-      .column {
-        float: left;
-        width: 33.33%;
-        padding: 0px;
-      }
-
-      .row::after {
-        content: "";
-        clear: both;
-        display: table;
-      }
-
-      @media screen and (max-width: 700px) {
-      .column {
-        width: 100%;
-      }
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Biblioteca para fontes-->
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      background-color: rgb(58, 117, 87);
+      background-size: cover;
+    }
+    header {
+      color: rgb(252, 252, 232);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 20vh;
+      font-size: 80px;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+    .carousel-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin: 20px;
+    }
+    .carousel {
+      display: flex;
+      overflow: hidden;
+      width: 90%;
+      max-width: 50%; 
+      position: relative;
+    }
+    .carousel img {
+      width: 100%;
+      height: auto;
     }
 
-  
-    </style>
-    <title>Nature Mid 77</title>
-    <link rel="icon" type="image/x-icon" href="https://logodownload.org/wp-content/uploads/2014/04/nike-logo-0.png">
-  </head>
-  <body>
-  
-      <header>
-        Just Do It
-      </header>
+    .carousel-button {
+      background-color: rgba(225, 252, 232, 0.7);
+      color: rgb(58, 117, 87);
+      text-align: center;
+      width: 40px;
+      height: 40px;
+      font-size: 24px;
+      cursor: pointer;
+      font-family: Arial, Helvetica, sans-serif;
+      border-radius: 50%;
+      border: none;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 1;
+    }
+    .carousel-button.prev {
+      left: 10px;
+    }
+    .carousel-button.next {
+      right: 10px;
+    }
+    .carousel-button:hover {
+      background-color: rgb(58, 117, 87);
+      color: rgb(225, 252, 232);
+    }
+    a {
+      color: rgb(58, 117, 87);
+    }
+    h1 {
+      font-size: 40px;
+      font-family: Arial, Helvetica, sans-serif;
+      text-align: center;
+      margin: 3%;
+      color: rgb(225, 252, 232);
+      justify-content: center;
+    }
+    h2 {
+      font-size: 40px;
+      font-family: Arial, Helvetica, sans-serif;
+      text-align: center;
+      color: rgb(225, 252, 232);
+    }
+    h3 {
+      color: rgb(225, 252, 232);
+      font-size: 40px;
+      font-family: Arial, Helvetica, sans-serif;
+      text-align: center;
+      margin: 3%;
+    }
+  </style>
+  <title>Nature Mid 77</title>
+  <link rel="icon" type="image/x-icon" href="https://logodownload.org/wp-content/uploads/2014/04/nike-logo-0.png">
+</head>
+<body>
 
-      <div class="row">
+<header>
+  Just Do It
+</header>
 
-        <div class="column">
-          <img src="https://mir-s3-cdn-cf.behance.net/project_modules/fs/91a7fc168255327.64372811ae173.png" alt="Nike logo" style="width:100%">
-        </div>
+<div class="carousel-container">
+  <div class="carousel">
+    <button class="carousel-button prev" id="prevBtn"><i class="fas fa-chevron-left"></i></button>
+    <img src="https://mir-s3-cdn-cf.behance.net/project_modules/fs/91a7fc168255327.64372811ae173.png" alt="Imagem 1">
+    <img src="https://mir-s3-cdn-cf.behance.net/project_modules/fs/6dbcda168255327.64372811aeedf.png" alt="Imagem 2">
+    <img src="https://mir-s3-cdn-cf.behance.net/project_modules/fs/ed5a98168255327.64372811afdef.png" alt="Imagem 3">
+    <button class="carousel-button next" id="nextBtn"><i class="fas fa-chevron-right"></i></button>
+  </div>
+</div>
 
-        <div class="column">
-          <img src="https://mir-s3-cdn-cf.behance.net/project_modules/fs/6dbcda168255327.64372811aeedf.png"alt="Nike logo" style="width:100%" >
-        </div>
+<script src="heitor.js"></script>
 
-        <div class="column">
-          <img src="https://mir-s3-cdn-cf.behance.net/project_modules/fs/ed5a98168255327.64372811afdef.png" alt="Nike logo" style="width:100%" >
-        </div>
+<h1>O Blazer Mid 77 Nature é um lançamento sustentável com tecnologia única Nike, produzido junto à especialistas. O calçado visa o conforto do usuário e um mundo mais verde.</h1>
 
-      </div>
+<br>
 
-  
-    <h1>O Blazer Mid 77 Nature é um lançamento sustentável com tecnologia única Nike, produzido junto à especialistas.
-      O calçado visa o conforto do usuário e um mundo mais verde.
-  
-      
-    </h1>
-  
-    <br>
-  
-    <h2>
-      R$799,99 <br>
-      <br><button>
-        <a href="https://www.nike.com.br/snkrs">Ir ao Site</a>
-    </button> 
-    <br>
-  
-    </h2>
-  
-    <h3>
-      O produto estará disponível em breve. Confira mais SNKRS acima!
-    </h3>
-    <br>
-    <br>
-    <img src="https://mir-s3-cdn-cf.behance.net/project_modules/fs/8fa32c168255327.64373b0f73d8d.png" alt="Nike logo" width="100%" height="70%">
-    <img src="https://mir-s3-cdn-cf.behance.net/project_modules/fs/4e0a40168255327.6437281258a9e.png" alt="Nike logo" width="100%" height="70%">
-  
-  
-  
-  </body></html>
+<h2>
+  R$799,99 <br>
+  <br><button>
+    <a href="https://www.nike.com.br/snkrs">Ir ao Site</a>
+  </button> 
+  <br>
+</h2>
+
+<h3>
+  O produto estará disponível em breve. Confira mais SNKRS acima!
+</h3>
+<br>
+<br>
+<img src="https://mir-s3-cdn-cf.behance.net/project_modules/fs/8fa32c168255327.64373b0f73d8d.png" alt="Nike logo" width="100%" height="70%">
+<img src="https://mir-s3-cdn-cf.behance.net/project_modules/fs/4e0a40168255327.6437281258a9e.png" alt="Nike logo" width="100%" height="70%">
+
+</body>
+</html>
